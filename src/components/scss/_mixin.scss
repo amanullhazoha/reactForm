@@ -1,0 +1,5 @@
+@mixin col($size: 12) {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: $size * 8.33%;
+}

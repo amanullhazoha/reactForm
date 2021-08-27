@@ -1,0 +1,87 @@
+@import "./components/scss/mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col,
+.col-12 {
+  @include col();
+}
+
+.col-8 {
+  @include col($size: 8);
+  margin: 0 auto;
+}
+
+.col-6 {
+  @include col($size: 6);
+  display: inline-block;
+}
+
+section {
+  .col-8 {
+    padding-top: 20px;
+    border: 1px solid grey;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+
+    div {
+      margin-bottom: 7px;
+      label {
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      outline: none;
+      padding: 5px 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-radius: 5px;
+    }
+
+    input[type="date"] {
+      text-transform: uppercase;
+    }
+
+    .submitBtn {
+      width: 100px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+
+      button {
+        width: 100%;
+        padding: 7px 0;
+        background: #f174eb;
+        color: #fff;
+        font-size: 17px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+      }
+
+      button:hover {
+        background: #e48fdf;
+      }
+    }
+  }
+}
